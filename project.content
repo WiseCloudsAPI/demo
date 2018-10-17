@@ -1,4 +1,5 @@
 ComplaintSOAPBinding\PostComplaint.xml
 ComplaintSOAPBinding\ReshipPackage.xml
+http%3A%2F%2Fec2-54-159-73-65.compute-1.amazonaws.com\Status.xml
 ComplaintSOAPBinding-TestSuite\PostComplaint-TestCase.xml
 ComplaintSOAPBinding-TestSuite\ReshipPackage-TestCase.xml
