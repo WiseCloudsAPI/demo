@@ -20,25 +20,6 @@
       <con:params/>
       <con:element xmlns:stat="http://ec2-54-159-73-65.compute-1.amazonaws.com/warehouse/status">stat:Response</con:element>
     </con:representation>
-    <con:request name="Request 1" id="3eb7fa13-6556-44f8-90fc-b6725e5147ee" mediaType="application/json">
-      <con:settings>
-        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
-      </con:settings>
-      <con:endpoint>http://ec2-54-159-73-65.compute-1.amazonaws.com</con:endpoint>
-      <con:request/>
-      <con:originalUri>http://ec2-54-159-73-65.compute-1.amazonaws.com/warehouse/status</con:originalUri>
-      <con:credentials>
-        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
-        <con:authType>No Authorization</con:authType>
-      </con:credentials>
-      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-      <con:parameters>
-        <entry key="location" value="" xmlns="http://eviware.com/soapui/config"/>
-      </con:parameters>
-      <con:parameterOrder>
-        <con:entry>location</con:entry>
-      </con:parameterOrder>
-    </con:request>
     <con:request name="Shenzen" id="3eb7fa13-6556-44f8-90fc-b6725e5147ee" mediaType="application/json">
       <con:settings>
         <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
