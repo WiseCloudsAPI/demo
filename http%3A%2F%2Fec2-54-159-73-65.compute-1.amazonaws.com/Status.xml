@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="Status" path="/warehouse/status" id="d69b64bb-ccff-43ec-a3fa-c67b2e753818" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="d69b64bb-ccff-43ec-a3fa-c67b2e753818fileName">Status</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Status" id="7810c246-25b7-4817-8dda-3ad3421e7ad2" method="GET">
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element xmlns:stat="http://ec2-54-159-73-65.compute-1.amazonaws.com/warehouse/status">stat:Response</con:element>
+    </con:representation>
+    <con:request name="Request 1" id="3eb7fa13-6556-44f8-90fc-b6725e5147ee" mediaType="application/json">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>http://ec2-54-159-73-65.compute-1.amazonaws.com</con:endpoint>
+      <con:request/>
+      <con:originalUri>http://ec2-54-159-73-65.compute-1.amazonaws.com/warehouse/status</con:originalUri>
+      <con:credentials>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

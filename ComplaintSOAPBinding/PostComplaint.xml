@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation id="164037c5-601a-407c-b07f-988e67ef295f" isOneWay="false" action="PostComplaint" name="PostComplaint" bindingOperationName="PostComplaint" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:con="http://eviware.com/soapui/config">
+<con:operation id="164037c5-601a-407c-b07f-988e67ef295f" isOneWay="false" action="PostComplaint" name="PostComplaint" bindingOperationName="PostComplaint" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="164037c5-601a-407c-b07f-988e67ef295ffileName">PostComplaint</con:setting>
   </con:settings>
@@ -23,6 +23,10 @@
       </wsdl:Complaint>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
     <con:wsaConfig mustUnderstand="NONE" version="200508" action="PostComplaint"/>
   </con:call>
 </con:operation>
