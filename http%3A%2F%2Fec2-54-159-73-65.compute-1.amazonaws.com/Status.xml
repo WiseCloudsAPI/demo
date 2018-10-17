@@ -6,7 +6,14 @@
   <con:parameters/>
   <con:method name="Status" id="7810c246-25b7-4817-8dda-3ad3421e7ad2" method="GET">
     <con:settings/>
-    <con:parameters/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>location</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+    </con:parameters>
     <con:representation type="RESPONSE">
       <con:mediaType>application/json</con:mediaType>
       <con:status>200</con:status>
@@ -25,7 +32,31 @@
         <con:authType>No Authorization</con:authType>
       </con:credentials>
       <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-      <con:parameters/>
+      <con:parameters>
+        <entry key="location" value="" xmlns="http://eviware.com/soapui/config"/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>location</con:entry>
+      </con:parameterOrder>
+    </con:request>
+    <con:request name="Shenzen" id="3eb7fa13-6556-44f8-90fc-b6725e5147ee" mediaType="application/json">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>http://ec2-54-159-73-65.compute-1.amazonaws.com</con:endpoint>
+      <con:request/>
+      <con:originalUri>http://ec2-54-159-73-65.compute-1.amazonaws.com/warehouse/status</con:originalUri>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <entry key="location" value="Shenzen" xmlns="http://eviware.com/soapui/config"/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>location</con:entry>
+      </con:parameterOrder>
     </con:request>
   </con:method>
 </con:resource>
