@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <con:soapui-project id="3a5a5fb9-a43d-40e9-aa72-df082919b995" created="2.5.0" activeEnvironment="Default environment" name="Project 1" resourceRoot="" compositeProjectFormat="1.3" updated="2.5.0" encryptionMode="Not encrypted" xmlns:con="http://eviware.com/soapui/config">
-  <con:description>Some data</con:description>
+  <con:description/>
   <con:settings>
     <con:setting id="3a5a5fb9-a43d-40e9-aa72-df082919b995fileName">Project-1</con:setting>
   </con:settings>
