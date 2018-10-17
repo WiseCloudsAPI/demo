@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operation id="164037c5-601a-407c-b07f-988e67ef295f" isOneWay="false" action="PostComplaint" name="PostComplaint" bindingOperationName="PostComplaint" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="164037c5-601a-407c-b07f-988e67ef295ffileName">PostComplaint</con:setting>
+  </con:settings>
+  <con:call id="166659da-c413-4a9a-8b57-5628d43b58e2" name="Request 1">
+    <con:settings/>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>http://ec2-54-159-73-65.compute-1.amazonaws.com:80/ComplaintSOAPBinding</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsdl="http://www.wiseclouds.com/shipping/Complaint/wsdl/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <wsdl:Complaint>
+         <wsdl:ShipmentID>?</wsdl:ShipmentID>
+         <wsdl:Contact>
+            <wsdl:Name>?</wsdl:Name>
+            <wsdl:Phone>?</wsdl:Phone>
+            <wsdl:Email>?</wsdl:Email>
+         </wsdl:Contact>
+         <wsdl:ComplaintDate>?</wsdl:ComplaintDate>
+         <wsdl:ComplaintReason>?</wsdl:ComplaintReason>
+         <wsdl:ComplaintDescription>?</wsdl:ComplaintDescription>
+      </wsdl:Complaint>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="PostComplaint"/>
+  </con:call>
+</con:operation>

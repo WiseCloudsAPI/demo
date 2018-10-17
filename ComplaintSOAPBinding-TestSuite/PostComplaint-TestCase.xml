@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="80f4b142-4e6f-4758-ba96-814da61fda53" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="PostComplaint TestCase" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="80f4b142-4e6f-4758-ba96-814da61fda53fileName">PostComplaint-TestCase</con:setting>
+  </con:settings>
+  <con:testStep type="request" id="0063bb0b-20b3-4a38-8102-018daa11d556" name="PostComplaint">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>ComplaintSOAPBinding</con:interface>
+      <con:operation>PostComplaint</con:operation>
+      <con:request name="PostComplaint" id="1cb388e2-f08d-4793-9983-c29e4b4757af">
+        <con:settings/>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://ec2-54-159-73-65.compute-1.amazonaws.com:80/ComplaintSOAPBinding</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsdl="http://www.wiseclouds.com/shipping/Complaint/wsdl/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <wsdl:Complaint>
+         <wsdl:ShipmentID>?</wsdl:ShipmentID>
+         <wsdl:Contact>
+            <wsdl:Name>?</wsdl:Name>
+            <wsdl:Phone>?</wsdl:Phone>
+            <wsdl:Email>?</wsdl:Email>
+         </wsdl:Contact>
+         <wsdl:ComplaintDate>?</wsdl:ComplaintDate>
+         <wsdl:ComplaintReason>?</wsdl:ComplaintReason>
+         <wsdl:ComplaintDescription>?</wsdl:ComplaintDescription>
+      </wsdl:Complaint>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:wsaConfig action="PostComplaint"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

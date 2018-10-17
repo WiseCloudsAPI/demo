@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite id="bcc111f3-6d3a-41af-a9ec-0c4dd467c14a" name="ComplaintSOAPBinding TestSuite" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="bcc111f3-6d3a-41af-a9ec-0c4dd467c14afileName">ComplaintSOAPBinding-TestSuite</con:setting>
+  </con:settings>
+  <con:runType>SEQUENTIAL</con:runType>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testSuite>

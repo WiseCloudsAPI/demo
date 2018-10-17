@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:interface xsi:type="con:WsdlInterface" id="d282168d-c79a-495b-8cb0-01be594a0887" wsaVersion="NONE" name="ComplaintSOAPBinding" type="wsdl" bindingName="{http://www.wiseclouds.com/shipping/Complaint/wsdl/}ComplaintSOAPBinding" soapVersion="1_1" anonymous="optional" definition="http://ec2-54-159-73-65.compute-1.amazonaws.com/ComplaintSOAPBinding?WSDL" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <con:settings>
+    <con:setting id="d282168d-c79a-495b-8cb0-01be594a0887fileName">ComplaintSOAPBinding</con:setting>
+  </con:settings>
+  <con:definitionCache type="TEXT" rootPart="http://ec2-54-159-73-65.compute-1.amazonaws.com/ComplaintSOAPBinding?WSDL">
+    <con:part>
+      <con:url>http://ec2-54-159-73-65.compute-1.amazonaws.com/ComplaintSOAPBinding?WSDL</con:url>
+      <con:content><![CDATA[<wsdl:definitions name="Complaint" targetNamespace="http://www.wiseclouds.com/shipping/Complaint/wsdl/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://www.wiseclouds.com/shipping/Complaint/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap10="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.wiseclouds.com/shipping/Complaint/wsdl/">
+      <xsd:element name="Complaint">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element ref="tns:ShipmentID"/>
+            <xsd:element ref="tns:Contact"/>
+            <xsd:element ref="tns:ComplaintDate"/>
+            <xsd:element ref="tns:ComplaintReason"/>
+            <xsd:element ref="tns:ComplaintDescription"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ShipmentID">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:integer">
+            <xsd:minInclusive value="100000000"/>
+            <xsd:maxInclusive value="999999999"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="Contact">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="tns:Name"/>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="tns:Phone"/>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="tns:Email"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Name" type="xsd:string"/>
+      <xsd:element name="Phone" type="xsd:string"/>
+      <xsd:element name="Email" type="xsd:string"/>
+      <xsd:element name="ComplaintDate" type="xsd:date"/>
+      <xsd:element name="ComplaintReason">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="Shipment late"/>
+            <xsd:enumeration value="Shipment not delivered"/>
+            <xsd:enumeration value="Wrong address"/>
+            <xsd:enumeration value="Shipment damaged"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="ComplaintDescription" type="xsd:string"/>
+      <xsd:element name="ComplaintAcknowledge">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element ref="tns:ShipmentIDAck"/>
+            <xsd:element ref="tns:ComplaintReceivedDate"/>
+            <xsd:element ref="tns:ComplaintStatus"/>
+            <xsd:element ref="tns:ComplaintMessage"/>
+            <xsd:element ref="tns:ComplaintVersion"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ShipmentIDAck">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:integer">
+            <xsd:minInclusive value="100000000"/>
+            <xsd:maxInclusive value="999999999"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="ComplaintReceivedDate" type="xsd:dateTime"/>
+      <xsd:element name="ComplaintStatus" type="xsd:string"/>
+      <xsd:element name="ComplaintMessage" type="xsd:string"/>
+      <xsd:element name="ComplaintVersion" type="xsd:string"/>
+      <xsd:element name="Reship">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="tns:ReshipID"/>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="tns:ReshipAuth"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ReshipID">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:integer">
+            <xsd:minInclusive value="100000000"/>
+            <xsd:maxInclusive value="999999999"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="ReshipAuth">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:integer">
+            <xsd:minInclusive value="1"/>
+            <xsd:maxInclusive value="999"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="ReshipAck">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:integer">
+            <xsd:minInclusive value="0"/>
+            <xsd:maxInclusive value="1"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ReshipRequestMessage">
+    <wsdl:part name="ReshipRequestContent" element="tns:Reship"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ComplaintResponseMessage">
+    <wsdl:part name="ResponseContent" element="tns:ComplaintAcknowledge"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ComplaintRequestMessage">
+    <wsdl:part name="RequestContent" element="tns:Complaint"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ReshipResponseMessage">
+    <wsdl:part name="ReshipResponseContent" element="tns:ReshipAck"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ComplaintService">
+    <wsdl:operation name="PostComplaint">
+      <wsdl:input message="tns:ComplaintRequestMessage"></wsdl:input>
+      <wsdl:output message="tns:ComplaintResponseMessage"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReshipPackage">
+      <wsdl:input message="tns:ReshipRequestMessage"></wsdl:input>
+      <wsdl:output message="tns:ReshipResponseMessage"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ComplaintSOAPBinding" type="tns:ComplaintService">
+    <soap10:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="PostComplaint">
+      <soap10:operation soapAction="PostComplaint"/>
+      <wsdl:input>
+        <soap10:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap10:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReshipPackage">
+      <soap10:operation soapAction="ReshipPackage"/>
+      <wsdl:input>
+        <soap10:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap10:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ComplaintServiceService">
+    <wsdl:port name="ComplaintPort" binding="tns:ComplaintSOAPBinding">
+      <soap10:address location="http://ec2-54-159-73-65.compute-1.amazonaws.com:80/ComplaintSOAPBinding"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content>
+      <con:type>http://schemas.xmlsoap.org/wsdl/</con:type>
+    </con:part>
+  </con:definitionCache>
+  <con:endpoints>
+    <con:endpoint>http://ec2-54-159-73-65.compute-1.amazonaws.com:80/ComplaintSOAPBinding</con:endpoint>
+  </con:endpoints>
+</con:interface>

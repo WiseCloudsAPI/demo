@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operation id="c6702ba0-ff59-487a-9e65-767b606c9384" isOneWay="false" action="ReshipPackage" name="ReshipPackage" bindingOperationName="ReshipPackage" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="c6702ba0-ff59-487a-9e65-767b606c9384fileName">ReshipPackage</con:setting>
+  </con:settings>
+  <con:call id="a19e7f3d-fa5c-41c4-b3d1-8e14225fe446" name="Request 1">
+    <con:settings/>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>http://ec2-54-159-73-65.compute-1.amazonaws.com:80/ComplaintSOAPBinding</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsdl="http://www.wiseclouds.com/shipping/Complaint/wsdl/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <wsdl:Reship>
+         <wsdl:ReshipID>?</wsdl:ReshipID>
+         <wsdl:ReshipAuth>?</wsdl:ReshipAuth>
+      </wsdl:Reship>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="ReshipPackage"/>
+  </con:call>
+</con:operation>

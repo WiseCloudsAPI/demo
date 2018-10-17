@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="65a85801-cbd0-418c-bc89-1873b12eec12" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="ReshipPackage TestCase" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="65a85801-cbd0-418c-bc89-1873b12eec12fileName">ReshipPackage-TestCase</con:setting>
+  </con:settings>
+  <con:testStep type="request" id="40073160-5880-4e21-80fc-c00b4ded880c" name="ReshipPackage">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>ComplaintSOAPBinding</con:interface>
+      <con:operation>ReshipPackage</con:operation>
+      <con:request name="ReshipPackage" id="21219473-18ab-451c-98b5-d953d57cdc8f">
+        <con:settings/>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://ec2-54-159-73-65.compute-1.amazonaws.com:80/ComplaintSOAPBinding</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsdl="http://www.wiseclouds.com/shipping/Complaint/wsdl/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <wsdl:Reship>
+         <wsdl:ReshipID>?</wsdl:ReshipID>
+         <wsdl:ReshipAuth>?</wsdl:ReshipAuth>
+      </wsdl:Reship>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:wsaConfig action="ReshipPackage"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>
