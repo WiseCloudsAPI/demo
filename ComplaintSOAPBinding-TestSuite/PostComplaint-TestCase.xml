@@ -3,6 +3,7 @@
   <con:settings>
     <con:setting id="80f4b142-4e6f-4758-ba96-814da61fda53fileName">PostComplaint-TestCase</con:setting>
   </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="request" id="0063bb0b-20b3-4a38-8102-018daa11d556" name="PostComplaint">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
